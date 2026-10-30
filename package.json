@@ -1,0 +1,28 @@
+{
+  "name": "alaric",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "test": "vitest run --exclude '**/*.real.test.ts'",
+    "test:integration:real": "vitest run tests/agent-runtime.real.test.ts"
+  },
+  "dependencies": {
+    "@langchain/core": "1.3.2",
+    "@langchain/langgraph": "1.5.3",
+    "@langchain/openai": "1.8.0",
+    "fastify": "5.12.7",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "typescript": "5.9.3",
+    "vitest": "4.1.12"
+  }
+}
